@@ -12,7 +12,7 @@
         public DateTime ArrivalTime { get; set; }
         public int DurationMinutes { get; set; }
         public int TotalSeats { get; set; }
-        public int AvaliableSeats { get; set; }
+        public int AvailableSeats { get; set; }
         public decimal BasePrice { get; set; }
         public string Currency { get; set; }
         public string Status { get; set; }
