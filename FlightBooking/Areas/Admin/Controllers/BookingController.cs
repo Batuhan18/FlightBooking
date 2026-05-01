@@ -31,7 +31,7 @@ namespace FlightBooking.Areas.Admin.Controllers
             ViewBag.departureTime = value.DepartureTime;
             ViewBag.arrivalTime = value.ArrivalTime;
             ViewBag.airlaneCode = value.AirlineCode;
-            return View(value);
+            return View();
         }
 
         [HttpPost]
