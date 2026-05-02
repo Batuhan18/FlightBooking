@@ -46,6 +46,9 @@ namespace FlightBooking.Areas.Admin.Controllers
             ViewBag.ArrivalTime = flight?.ArrivalTime;
             ViewBag.TotalSeats = flight?.TotalSeats ?? 0;
             ViewBag.Status = flight?.Status ?? "_";
+
+            TempData["flightnumber"] = flight.FlightNumber;
+
             return View(passengers);
         }
     }

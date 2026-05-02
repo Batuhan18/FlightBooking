@@ -2,7 +2,7 @@
 {
     public class PassengerListItemDto
     {
-       // public string PassengerId { get; set; }
+        public string PassengerId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }

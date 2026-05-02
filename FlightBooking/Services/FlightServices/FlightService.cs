@@ -64,7 +64,7 @@ namespace FlightBooking.Services.FlightServices
                     CheckInStatus = p.CheckInStatus,
                     //PaymentStatus = b.PaymentStatus,
                     TicketStatus = p.TicketStatus,
-                    //PassengerId = p.PassengerId
+                    PassengerId = p.PassengerId
                 }))
                 .ToList();
 
