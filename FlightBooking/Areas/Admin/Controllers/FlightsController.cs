@@ -1,4 +1,5 @@
 ﻿using FlightBooking.Dtos.FlightDtos;
+using FlightBooking.Services.BookingServices;
 using FlightBooking.Services.FlightServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,10 +9,12 @@ namespace FlightBooking.Areas.Admin.Controllers
     public class FlightsController : Controller
     {
         private readonly IFlightService _flightService;
+        private readonly IBookingService _bookingService;
 
-        public FlightsController(IFlightService flightService)
+        public FlightsController(IFlightService flightService, IBookingService bookingService)
         {
             _flightService = flightService;
+            _bookingService = bookingService;
         }
 
         public async Task<IActionResult> FlightList()
@@ -48,6 +51,8 @@ namespace FlightBooking.Areas.Admin.Controllers
             ViewBag.Status = flight?.Status ?? "_";
 
             TempData["flightnumber"] = flight.FlightNumber;
+            TempData["DepartureTime"] = flight.DepartureTime;
+            TempData["ArrivalTime"] = flight.ArrivalTime;
 
             return View(passengers);
         }
